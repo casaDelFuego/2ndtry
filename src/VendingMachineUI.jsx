@@ -26,7 +26,7 @@ export const VendingMachineUI = () => {
 
   return (
     <>
-      {/* {JSON.stringify(state.value)} */}
+      {/* <h1 className="state">{JSON.stringify(state.value)}</h1> */}
       <div className="main">
         <div className="wrapper--products">
           {(!state.matches('dispensingProduct') || !state.matches('returnChange')) && state.context.products.map((product) => (
