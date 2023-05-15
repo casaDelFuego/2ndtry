@@ -1,11 +1,10 @@
 import './App.css';
-import { ToggleButton } from './ToggleButton';
+import { VendingMachineUI } from './VendingMachineUI';
 
 function App() {
   return (
     <div className="App">
-      <h1>Toggle Example</h1>
-      <ToggleButton />
+      <VendingMachineUI />
     </div>
   );
 }

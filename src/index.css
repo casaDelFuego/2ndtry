@@ -67,3 +67,67 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-card p {
+  margin-bottom: 0;
+}
+
+.product-card:hover {
+  background-color: lightgrey;
+}
+
+.out-of-stock {
+  color: red;
+  font-weight: bold;
+}
+
+.submit-btn {
+  margin: 0.5em;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper--products,
+.wrapper--coins {
+  display: flex;
+}
+
+.wrapper--products {
+  flex: 0 0 65%;
+  flex-wrap: wrap;
+}
+
+.wrapper--controls {
+  flex: 0 0 35%;
+}
+
+.coin-btn {
+  margin: 10px;
+  height: 40px;
+}
+
+.right-side {
+  flex-direction: column;
+}
