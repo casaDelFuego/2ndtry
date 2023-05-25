@@ -18,6 +18,20 @@
   display: flex;
 }
 
+.marquee-text {
+  background: rgb(56, 94, 2);
+  font-size: 20px;
+  color: rgb(139, 238, 0);
+  font-weight: 800;
+  padding: 5px 0;
+  margin: 0 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
 /* Products Section */
 .wrapper--products {
   display: flex;
@@ -26,24 +40,50 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+}
+
+.product-card.fade-out {
+  opacity: 0;
+}
+
+.product-card.fade-in {
+  transform: scale(2.1);
+  position: absolute;
+}
+
+.product-card.selected {
+  transform: scale(1.2);
+  z-index: 1;
 }
 
 .product-card {
+  overflow: hidden;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 150px;
+  height: 170px;
   padding: 10px;
-  background-color: #f1f1f1;
+  background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 8px;
   cursor: pointer;
+  /* transform-origin: center center; */
+  /* transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out; */
+  /* opacity: 1; */
 }
 
-.product-card:hover {
-  background-color: #e2e2e2;
+.product-card:hover:not(.product-card--dispense) .product-card__image{
+  transform: scale(1.15,1.15);
+  animation: jiggle 0.5s infinite linear;
+}
+
+.product-card--dispense .product-card__image { 
+  transform: translateY(300%);
+  overflow: hidden;
 }
 
 .product-card h3 {
@@ -62,17 +102,24 @@
 /* Right Side Section */
 .right-side {
   display: flex;
+  margin-left: 3%;
   flex-direction: column;
   align-items: center;
   width: 300px;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 8px;
 }
 
 .wrapper--feedbackMessages {
   align-self: center;
+  width: 200px;
+  height: 100px;
+}
+
+.wrapper--feedbackMessages .product-card__image {
+  margin-top: 30px;
 }
 
 h2 {
@@ -81,20 +128,14 @@ h2 {
   margin-bottom: 10px;
 }
 
-button {
-  width: 100%;
-  height: 50px;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #ccc;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #999;
+@keyframes jiggle {
+  /* start at 0deg and this scale size.
+     scale size is repeated here to maintain smooth scaling */
+  0% {transform: rotate(0deg) scale(1.15,1.15);}
+  /* midway rotate 2deg right */
+  50% {transform: rotate(2deg) scale(1.15,1.15);}
+  /* end rotate -2deg left */
+  100% {transform: rotate(-2deg) scale(1.15,1.15)}
 }
 
 h1 {
@@ -107,16 +148,6 @@ h1 {
 
 h1.error {
   color: red;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 /* Coin Buttons */
@@ -148,7 +179,7 @@ button.cancel {
   padding: 10px;
   font-size: 16px;
   color: #1f1f1f;
-
+  background-color: lightgray;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -159,4 +190,67 @@ button.cancel:hover {
   transform: scale(1.1);
   background-color: #ff0000;
   color: #fffcfc;
+}
+
+.product-card__image {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  transition: all .5s ease-out;
+  transform: translateY(0);
+}
+
+.product-card__image--1 {
+  background-image: url('./assets/snickers.jpeg');
+}
+
+.product-card__image--2 {
+  background-image: url('./assets/kitkat.jpeg');
+}
+
+.product-card__image--3 {
+  background-image: url('./assets/twix.jpeg');
+}
+
+.product-card__image--4 {
+  background-image: url('./assets/milky.jpeg');
+}
+
+.product-card__image--5 {  
+  background-image: url('./assets/reeses.jpeg');
+}
+
+.product-card__image--6 {
+  background-image: url('./assets/m&m.jpeg');
+}
+
+.product-card__image--7 {
+  background-image: url('./assets/hersheys.jpeg');
+}
+
+.product-card__image--8 {
+  background-image: url('./assets/butterfinger.jpeg');
+}
+
+.product-card__image--9 {
+    background-image: url('./assets/3musk.png');
+}
+
+.product-card__image--10 {
+    background-image: url('./assets/crunch.png');
+}
+
+.product-card__image--11 {
+    background-image: url('./assets/almond.jpeg');
+}
+
+.product-card__image--12 {
+    background-image: url('./assets/milkcho.jpeg');
+}
+
+embed { 
+  display: none; 
 }

@@ -1,7 +1,7 @@
 import { createMachine, assign } from 'xstate';
 
 export const vendingMachine = createMachine({
-  /** @xstate-layout N4IgpgJg5mDOIC5QDcwDsIEs1QLIEMBjAC2zADoAbAe3yxwGIJq0LtlqBrC1DbPIqVZVa9KAnbVC+AC6YWAbQAMAXWUrEoAA7VYmOS00gAHogC0AdgsAOcgGZrdgKzWl1mwBY7SgGwAaEABPcwBGJwAmJ3J3O28vJycATicfHwBfNIDeMQISMhE6fgYwACcS6hLyLUpZADMKgFtybP5coQoaQpwJNA5pAzR1dSMdPQGjUwQzEPClD2ibaxCLJSUQn2W7AOCpkK8fclXrFItEs9OPRIys9BzBfMwISjAGAEkAOQBlAFEAJQAVAD6AGEAPIfYZIECjfTyNATRCnA7hJbhFEoix2Hx2DzbUJKJzzJzrOyJcIeNYeDxOCzXEAtHBtB5PF4-AAy32BQIACr9QQARACqXMh2l0sMMUMmZgcB3cIXWHhsZzRXjxuyU5PIPmpIWs7g2HnSmXpt1a92Ej2eDHZnJ5fKFIpCGihMPGUvMHms4XIiViDi9yxSOq2QXMFnCIV9SjORsSEY8ew8dIZAjylpZNu+HK5gN5AuF-wU4RdYrGcIRUyWBwsCoJpz1Or16umBKicxSMxCWNmhJTZsZFrYmd+33+gt+70BADFBe9+Z9RdDxe7QJMQr57BYnHMlr4bOFUi2ZtYDg5T9ZEpqKXZD-2+IP0xRCNRsLBXmhYKUZJA3l8-kCYIQqoIwrhWHoICk7ayjeFiJikoY7K2bjkJ4xLessiQUrSJqpkywgvm+H5fiUP4QAwxiwDIsgUPgtQ-iUAAUsxKAAlAweFDuQhGfsR36QEubrgWuiDkrYzghiierOEoFgtokYTkFS24ElSXpKHY953E+5BYLAWjoHoODcuUEAAK6EDIFFUTR5B0QxzGrGxHEDmm7S6Zg+mGfwJnUOZlmCWBkoiQg3ZKOQYQbj4xwRgk4SJC2OrhbMySyrepLUlp5o6XpBmfj5pkWVZlHUT+dn0aUjmrOxnE5Z5eVGVAvn+TICjOqB5bBSY5gpdEsRKj4pwYW4TiJeEdhKckjgUmStanllj7ubUZkYL8YAyGZJSsBAuBwLA+AwNZpW0RVTHeNVLkPm5+TLat62bdtu2wPtMCBZ18IQVitiYh4swhH60Vov4Ya7AqtiOHMClGpeVJOAt13CGg1DTitECwE9L0vCVtn2ZVG4XbV7lIyjGDo3tB1gG9EofSF0yzL63pnM4PbHDMx6qr6Fg+OSv1+okGwhPD+EUNQugYxTR046djH485hP5KLZPPRTVOrt1UwA+Q8WKk4X2Xm4x44lGGnhCsG7xTSPhXLhrnC+QJT3VtwLEPgOBYzZZW42dTk1bbXEOxtTsu27qvCer3YWIcTlzNi27bkkLZGuFg1esSdgbt2MzGjcV12zIwecAAmtQZnchL2Oe9L51y37On567Rcl2Xr0ga6QU0+rrY2FrrgZY4p6+KNINmDSkdKgaMY+Ek6xwzbudcbAxDUAA7t8ZQVJLlcOTuNfzzpi8r2v5QlKHXXSie8wOGiyzkoeg3WMeuvzG4KKxONzgpNYGQmkjEBwEY8tWAdWppWaYb97DekjAmO+NhjzYh9MkX6U8kTcyFlxToYhgFq3PgSRIEVIzjScleWSD9h5hGpEpaKGwFKHj2C4NBOkrRgCwWHSYzgIruH1KeeKMYYwJTITMcKOI4LrEGrMQ8yY57aXcjxd8n5+IQBYWfRAVIfSRFrLMHwBJIikKQlzPBYlsTWCpFbNwgspHZXcrlbyxlCqWSUR3SYZxUJuFiKsKK3hsQtn0VrL02Irz43oRYxaN1UZrUDo9cmMAHGVhpPMBSKwuaM1NgqQ23ZDjc23Eqa+V5wgMKJsjVGStMYxIgmYS4E0n4z0GgpWSiFQjvyUi4fmutnDUl8PkhWYsonMLbu9UBZIfQuGEaSLm41dHmH1JHGwOporEN1hsTpwgA4PWdq7aJfSQEQT8dqes8Z-rjSNLrFsutI4xx3MSBUgjNLBIRhQeuaBG6lwpqU2mO4DjLAwoNdOmJayJ25hFBSrhVhwR0XYHCOdpH5APqvdeJRXmd0EWPNYmINjCJpIbX65BCST0pOCpYX9v5AA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QDcwDsIEs1QLIEMBjAC2zADoAbAe3yxwGIJq0LtlqBrC1DbPIqVZVa9KAnbVC+AC6YWAbQAMAXWUrEoAA7VYmOS00gAHogC0AdgsAOcgGZrdgKzWl1mwBY7SgGwAaEABPcwBGJwAmJ3J3O28vJycATicfHwBfNIDeMQISMhE6fgYwACcS6hLyLUpZADMKgFtybP5coQoaQpwJNA5pAzR1dSMdPQGjUwQzEPClD2ibaxCLJSUQn2W7AOCpkK8fclXrFItEs9OPRIys9BzBfMwISjAGAEkAOQBlAFEAJQAVAD6AGEAPIfYZIECjfTyNATRApRLkcJLNaJS7HE7bULhRIhewWDw+JweLxnHwWa4gFo4NoPJ4vH4AGW+wKBAAVfqCACIAVXZkO0ulhhihkzMdg84XIpx8SgsyzxqK8HhxuzCdnsHhCM0ViTcPnCHmptIEeWEj2eDBZbM53P5gpCGihMPG4sQ4XW5GJFnl1h8lzsPmcaqCoTCticcusxys4XCwdNt1a90tjJt31Z7MBXN5Av+CnCLuFYzhCKms2RDiSlLsFnCGz26rMZy10eDKWsZJCdnWyb4dLTbAzv2+-z5v3egIAYnz3jzPkLoSL3aAJXZkYk-eEG9KnKs9y31t71r41tHY0o7AO7haR9axxOp7P54uFM6Rqvyx6ENKDpciSOCEcxShcx4bFEVjdsaBpwTMt6pve5CENQ2CwK8aCwKUMiQAwxiwDIsgUPgtS4SUAAUIGrAAlAwZr0sIqHoZh2ElLhEDLm6P7rogFhRIkJLuCsjhKJE27Ho2FjkHsrgYnEazGohQ7IVgsBaOgeg4By5QQAAroQMj4YRxHkKR5EUbMtH0SmKntOQakaVh-A6dQ+mGVx35irxCApAJpIRPxYROFKWzhrsazzK4YnrEs7gYiEynmvZtR6RgvxgDIeklKwEC4HAsD4DAxlEbhZlkaUVGrEodEMcO5CpelmXZbl+WwIVMCeWW3kmJ6BrRMSqIJkkDiKseXgymsfqBiFJK6tYSWMRQaDUDOaUQLAbUdS8BGlSRFWUdRNU2YOyX5Cta0YJtBVFWAXWivCv5mAmtjbkSIF2ImsSNpJAbkIkm4uCk14bA2i31dQuhbbdJWmeZlXeNZdXIZD13tbd91rr1UzEkoA2CZEJzBusx6btJgmKnibgWN4Gzg8hJTNTlwLEPgOA7SZZXw5RVnHcj9mM1lzOs+zmM8djB4ogq-GrGEkEk+FlhJD6vipH6Bryn29P2TIIucAAmtQekcjDu1wwdFEHnztlncIutswbRsm51qhft1j0+WYIXSerXh+g4AYhC2iTGuQJJEhEPgAx48Xa-ksDENQADu3xlBUsNcxbVu1TbS3kAnyep+UJRiz1EozN29jWAmSr-pS1jHiF8xuKi32xAkPgLZkNK5-V2D6Bn+0WdnJ13vZ-cyKXHvY9MSikj6iqUo29ZGoGx7Xu2+pgUTDhx5aaAD2bmfD0jvfIRPH4liu7sVrP88eIvDYhjua+KxitjUWcFPdrqVLUitEA4BGH5mQN2D1b69k+lXGue5Gz12PCsLUgYjTV18C4Ps4Q94dFEPwMBWNy5z2RDMGYiMlAGgVA3RWYQPBRGJIHfEjY9guCweQK0YA8HiwITKOsCY+zLDIdKIOVCHBEN8MkKwERtxShYcxLCrEcKQA4WXT0McZJkl3NuMSsQMThEkp3MOMc3DBkxOsP+NxTp50cppFyukDIyCUdPSYeJ5jeFiDHEMv8-Tr2vCiS4exiSfRDMcFhjUIAZSFq1G6MAHEVgfsiJwupdRrGcPiI041KTkHQSBSkJJO7RhYRddaaNtoxKen7TJHidQGgbKk0mIFoj4g8AqSIUp8Q3m7iA4QqNobRNdF5Rx5gGzSTEskWsc8iQhlJsGf6zglh+L2NudIHSz4CyZmgFmbNemlnAb+IG9gQhfz2Ac+ulCdiWH0X2DYndPoxRSCw+2aBHbG1uqUz2yIaGuGOAcoZywxqK1jFuQxUdiSXkVCwguKc04lFeTPYhBJozRwSEsJspNLiZJBvuBIswQosInjCmQ1AtChA3pk6upwxGxGvBYAIzwyK4jcPYVYXpZhNMEbokAAAjagMgCUNHMEBKILgNEUtcdSkAJRMBQGIPYiKsZGUxRZXMZlAQk6PF1ogGYSgAjEDAJK6ViAY4BHLrMWwiNmVzCVTMdesRSXCqjpS+sBSwDGBkAAAk5uwvpN8npEmRPxEOqxBIhGriFa17YyUawBqKkJ+BKCwECO6va+LCXmHcAcICRp27ewSjSsAdKpjV3mINMh-E8QJDClynl1A+UFtRP9AMX1y0XCERKqVMrLBzB9EaEtkjy0qrVcQDVsxtW6rbQayhEpC1dqrKW0ZYUzlpvrZm5w2adQZAyEAA */
   predictableActionArguments: true,
   id: 'vendingMachine',
   context: {
@@ -133,40 +133,36 @@ export const vendingMachine = createMachine({
           actions: "setSelectedProduct"
         }, "noFundsMessage"],
 
-        RETURN_FUNDS: {
+        RETURN_FUNDS: [{
+          target: "idle",
+          cond: "nothingToReturn",
+          internal: true
+        }, {
           target: "fundReturnedMessage",
           actions: "returnFunds"
-        }
+        }]
       }
     },
 
     coinsInserted: {
-      on: {
-        INSERT_COIN: {
-          target: "coinsInserted",
-          actions: 'setAmountInserted',
-          internal: true
-        }
-      },
-
       after: {
-        "200": "idle"
+        "1000": "idle"
       }
     },
 
     dispensingProduct: {
       after: {
-        "2000": [{
+        "2000": {
           target: "returnChange",
           cond: "hasChange",
           actions: "calculateChange"
-        }, "thankYouPage"]
+        },
       }
     },
 
     fundReturnedMessage: {
       after: {
-        "3000": "idle"
+        "1000": "idle"
       }
     },
 
@@ -178,19 +174,19 @@ export const vendingMachine = createMachine({
 
     oosMessage: {
       after: {
-        "1000": "idle"
+        "3000": "idle"
       }
     },
 
     returnChange: {
       after: {
-        "3000": "thankYouPage"
+        "2000": "thankYouPage"
       }
     },
 
     thankYouPage: {
       after: {
-        "3000": "idle"
+        "500": "idle"
       }
     },
 
@@ -198,7 +194,9 @@ export const vendingMachine = createMachine({
       after: {
         "500": "loading"
       }
-    }
+    },
+
+
   },
 
   initial: "loading"
@@ -210,6 +208,7 @@ export const vendingMachine = createMachine({
       };
     }),
     setSelectedProduct: assign((context, event) => {
+      console.log(event);
       return {
         selectedProduct: event.selectedProduct
       }
@@ -241,6 +240,9 @@ export const vendingMachine = createMachine({
     },
     hasChange: (context, event) => {
       return context.selectedProduct && context.amount > context.selectedProduct.price;
+    },
+    nothingToReturn: (context, event) => {      
+      return context.amount === 0;
     }
   },
 });
