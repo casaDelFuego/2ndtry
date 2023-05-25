@@ -1,2 +1,4 @@
 # Xstate-example
-workshop for building vending machine with xstate
+Demo for a presentation
+
+Run "npm i" and "npm run dev" to start it
